@@ -15,6 +15,7 @@ export const faqFlow = addKeyword(EVENTS.ACTION)
     .addAction(
         async (ctx, { state, endFlow, gotoFlow }) => {
             try {
+                const AI = new aiServices(config.Apikeia)
                 const response = await AI.chat(prompt, [{ role: "user", content: ctx.body }])
                 return endFlow(response);
             } catch (error) {

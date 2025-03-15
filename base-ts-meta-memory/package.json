@@ -5,7 +5,7 @@
   "main": "dist/app.js",
   "type": "module",
   "scripts": {
-    "start": "node ./dist/app.js --env-file=.env",
+    "start": "node ./base-ts-meta-memory/app.ts --env-file=.env",
     "lint": "eslint . --no-ignore",
     "dev": "npm run lint && nodemon ./src/app.ts --env-file=.env",
     "build": "npx rollup -c"
