@@ -6,12 +6,4 @@ services:
     restart: on-failure //=> siempre que tu bot falle se reiniciara
     ports:
       - 3000:3008 //el primer 3000 representa el puerto del VPS y el segundo el puerto de tu contenedor
-    environment:
-      - jwtToken=${jwtToken}
-      - numberId=${numberId}
-      - verifyToken=${verifyToken}
-      - Model=${Model}
-      - Apikeia=${Apikeia}
-      - spreadsheetId=${spreadsheetId}
-      - privateKey=${privateKey}
-      - clientEmail=${clientEmail}
+    environment: jwtToken=${jwtToken} numberId=${numberId} verifyToken=${verifyToken} Model=${Model} Apikeia=${Apikeia} spreadsheetId=${spreadsheetId} privateKey=${privateKey} clientEmail=${clientEmail}
