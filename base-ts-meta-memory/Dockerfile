@@ -1,7 +1,8 @@
 FROM node:18-bullseye as bot
 WORKDIR /app
-COPY base-ts-meta-memory .
-COPY base-ts-meta-memory/package.json ./
+COPY . .
+COPY ./base-ts-meta-memory/ .
+COPY package.json .
 RUN npm i
 RUN npm run build
 COPY . .
